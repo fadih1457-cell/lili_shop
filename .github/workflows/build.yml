@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+      - name: Recreate Android files cleanly
+        run: flutter create . --platforms=android --force
+
       - name: Build APK
         run: flutter build apk --debug --no-pub
 
